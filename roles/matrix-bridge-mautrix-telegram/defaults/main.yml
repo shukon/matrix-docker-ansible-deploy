@@ -60,6 +60,11 @@ matrix_mautrix_telegram_logging_level: WARNING
 # If false, created portal rooms will never be federated.
 matrix_mautrix_telegram_federate_rooms: true
 
+# Maximum number of participants in chats to bridge. Only applies when the portal is being created.
+# If there are more members when trying to create a room, the room creation will be cancelled.
+# -1 means no limit (which means all chats can be bridged)
+matrix_mautrix_telegram_max_member_count: -1
+
 # Controls whether the matrix-mautrix-telegram container exposes its HTTP port (tcp/8080 in the container).
 #
 # Takes an "<ip>:<port>" or "<port>" value (e.g. "127.0.0.1:9006"), or empty string to not expose.
